@@ -1,0 +1,442 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: #f4f4f9;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: linear-gradient(90deg, #000, #333); /* Black gradient */
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s ease-in-out;
+}
+
+header.hidden {
+    transform: translateY(-100%);
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 80px; /* Adjust the size of the logo */
+    margin-right: 10px; /* Space between logo and text */
+}
+
+header .logo h1 {
+    font-size: 24px;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: background 0.3s ease;
+}
+
+.dropdown-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #333;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background: #007bff; /* Red color on hover */
+}
+
+.dropdown-content a .dropdown-logo {
+    height: 50px;
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+header nav a {
+    margin-left: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+}
+
+header nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #007bff; /* Red underline */
+    transition: width 0.3s ease-in-out;
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('bg2.png') no-repeat center center/cover; /* Background image */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+.cta-buttons a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+}
+
+.cta-buttons .btn {
+    background: #007bff; /* Red button color */
+}
+
+.cta-buttons .btn-alt {
+    background: #333;
+}
+
+.cta-buttons a:hover {
+    transform: scale(1.1);
+}
+
+/* About Section */
+.about {
+    padding: 60px 40px;
+    text-align: center;
+    background: #fff;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+.about p1 {
+    display: block; 
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+/* Services Section */
+.services {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
+    gap: 30px;
+    padding: 60px 40px;
+    background: #f4f4f9;
+}
+
+.service {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service p {
+    font-size: 1.1rem;
+}
+
+/* Align last 3 services (last-service class) to the center */
+.last-service {
+    grid-column: span 1;
+    justify-self: center;
+}
+
+/* Ensure that all services maintain the same size */
+.service {
+    min-width: 250px;  /* Adjust size if needed */
+    height: 300px;  /* Same height for all boxes */
+}
+
+/* Portfolio Link Box */
+.portfolio-link {
+    grid-column: span 1;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    height: 300px;  /* Same height as other boxes */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-btn {
+    display: flex;
+    align-items: center;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.portfolio-btn:hover {
+    color: #007bff; /* Red hover color */
+}
+
+.portfolio-btn .arrow {
+    font-size: 2rem;
+    margin-left: 10px;
+}
+
+/* Adjust arrow size on hover */
+.portfolio-btn:hover .arrow {
+    transform: translateX(5px);
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 40px;
+    background: #fff;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    margin: 10px;
+}
+
+.contact-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #007bff;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.contact-item a:hover {
+    color: #007bff;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    color: #fff;
+    background: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #007bff;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #333, #000); /* Black gradient */
+    color: #fff;
+}
+
+footer .socials a {
+    margin-left: 20px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+}
+
+footer .socials a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #007bff; /* Red underline */
+    transition: width 0.3s ease-in-out;
+}
+
+footer .socials a:hover::after {
+    width: 100%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
