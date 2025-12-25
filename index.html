@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13 Dimensions Graphics</title>
+    <link rel="stylesheet" href="styles.css">
+	<script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="13dg.png" alt="13 Dimensions Graphics Logo">
+            <h1>13 Dimensions Graphics</h1>
+            <div class="dropdown">
+                <button class="dropdown-btn"> ▼</button>
+                <div class="dropdown-content">
+                    <a href="index.html">
+                        <img src="13dg.png" alt="13 Dimensions Graphics Logo" class="dropdown-logo">
+                        13 Dimensions Graphics
+                    </a>
+                    <a href="programming.html">
+                        <img src="13dp.png" alt="13 Dimensions Programming Logo" class="dropdown-logo">
+                        13 Dimensions Programming
+                    </a>
+					<a href="">
+                        <img src="13d-g.png" alt="13 Dimensions Gaming Logo" class="dropdown-logo">
+                        Coming Soon!
+                    </a>
+					<a href="">
+                        <img src="13dc.png" alt="13 Dimensions Collectibles Logo" class="dropdown-logo">
+                        Coming Soon!
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Revolutionizing creativity with 3D</h2>
+            <p>Animations, Models, Characters, Interiors & Architectural Visualizations.</p>
+            <div class="cta-buttons">
+                <a href="https://www.behance.net/gallery/208520169/13-Dimensions-Graphics-Show-Reel" class="btn">Watch our Showreel!</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="content">
+            <h2>About Us</h2>
+            <p>
+                13 Dimensions Graphics is a fully remote company and the parent organization of multiple specialized divisions, each dedicated to distinct fields such as programming, gaming, and collectibles. With over 25 years of cross-sector expertise within its leadership, 13 Dimensions Graphics is the foundation for delivering exceptional 3D solutions that redefine creative possibilities.
+            </p>
+            <p>
+                Our core expertise lies in 3D animations, 3D modeling, product design, character modeling, and interior and architectural visualization. Whether you're looking to bring life to a concept through stunning visuals or create detailed designs for complex structures, we provide tailored, premium-quality solutions to meet your needs.
+            </p>
+			<p>For more info, visit our <a href="https://www.linkedin.com/company/13dimensionsgraphics">LinkedIn</a> profile.</p>
+			<p1>NOTE: Our website is currently in development, it will be available soon!</p1>
+        </div>
+    </section>
+
+<section id="services" class="services">
+    <div class="service">
+        <h3>3D Animations</h3>
+        <p>High-definition animations, ranging from intricate car models to landscapes.</p>
+    </div>
+    <div class="service">
+        <h3>3D Models</h3>
+        <p>Detailed and accurate models, including sleek cars, ships, aircraft, and more.</p>
+    </div>
+    <div class="service">
+        <h3>Product Design & Animation</h3>
+        <p>Bringing product concepts to life with realistic 3D design and animation for market readiness.</p>
+    </div>
+    <div class="service">
+        <h3>Interior & Architectural Visualization</h3>
+        <p>Transforming architectural blueprints into lifelike 3D visualizations, making designs come to life.</p>
+    </div>
+    <div class="service last-service">
+        <h3>Industrial Animations & Designs</h3>
+        <p>Providing 3D solutions for complex industrial and technical projects, including machinery and processes.</p>
+    </div>
+    <div class="service last-service">
+        <h3>Graphic Design</h3>
+        <p>Crafting impactful visuals, from branding and logos to marketing materials.</p>
+    </div>
+    <div class="service last-service">
+        <h3>Character Design</h3>
+        <p>Designing unique characters for games, animations, and custom mascots.</p>
+    </div>
+    <!-- Portfolio Link Box -->
+    <div class="service portfolio-link">
+        <a href="https://www.behance.net/13dimensionsgraphics" class="portfolio-btn">
+            <h3>View Our Portfolio!</h3>
+            <span class="arrow">&#8594;</span> <!-- Right arrow symbol -->
+        </a>
+    </div>
+</section>
+	
+	<section id="contact" class="contact">
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you! Please fill out the form below or reach out through the provided contact details.</p>
+
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3>Email:</h3>
+                <a href="mailto:contact@13dimensions.co">contact@13dimensions.co</a>
+            </div>
+            <div class="contact-item">
+                <h3>Phone:</h3>
+                <a href="tel:+923322425697">+923310003516</a>
+				<a href=""> / </a>
+				<a href="tel:+966565053570">+966565053570</a>
+            </div>
+        </div>
+
+        <form id="form" class="contact-form">
+		  <div class="form-group">
+			<label for="subject">Subject:</label>
+			<input type="text" name="subject" id="subject" placeholder="Your Subject" required>
+		  </div>
+		  <div class="form-group">
+			<label for="email">Email:</label>
+			<input type="email" name="email" id="email" placeholder="Your Email" required>
+		  </div>
+		  <div class="form-group">
+			<label for="name">Name:</label>
+			<input type="text" name="name" id="name" placeholder="Your Name" required>
+		  </div>
+		  <div class="form-group">
+			<label for="message">Message:</label>
+			<textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+		  </div>
+
+		  <input type="submit" class="submit-btn" id="button" value="Send Message" >
+		</form>
+
+		<script type="text/javascript"
+		  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+		<script type="text/javascript">
+		  emailjs.init('KhNltZ22TqSuObZCa')
+		</script>
+			</div>
+</section>
+
+    <footer>
+        <p>© 2024 13 Dimensions Graphics. All rights reserved.</p>
+        <div class="socials">
+            <a href="https://www.linkedin.com/company/13dimensionsgraphics">LinkedIn</a>
+            <a href="https://www.facebook.com/profile.php?id=61564353127258">Facebook</a>
+            <a href="https://www.instagram.com/13dimensionsgraphics">Instagram</a>
+			<a href="">T&Cs</a>
+        </div>
+    </footer>
+</body>
+</html>
